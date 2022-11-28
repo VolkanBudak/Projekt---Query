@@ -4,35 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/abdbd0fbf7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Query</title>
   </head>
-  <body>
+  <body onload="renderNote()">
       <div class="app">
-      <div class="menu-toggle">
-        <div class="hamburger">
-          <span></span>
-        </div>
-      </div>
+          <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+            </div>
+          </div>
 
-      <aside class="sidebar">
-        <section class="section-logo">
-          <img class="logo" src="img/Query.svg" alt="" />
-        </section>
-        <br />
-        <br />
-        <nav class="menu">
-          <a href="" class="menu-item is-active">
-            <img class="menu-logo" src="img/Search.svg" />
-          </a>
-          <a href="" class="menu-item">
-            <img class="menu-logo" src="img/Star.svg" />
-          </a>
-          <a href="" class="menu-item">
-            <img class="menu-logo" src="img/Settings.svg" />
-          </a>
-        </nav>
-      </aside>
-    </div>
+          <aside class="sidebar">
+            <section class="section-logo">
+                <img class="logo" src="img/Query.svg" alt="" />
+            </section>
+            <br />
+            <br />
+            <nav class="menu">
+                <a href="" class="menu-item is-active">
+                  <img class="menu-logo" src="img/Search.svg" />
+                </a>
+                <a href="" class="menu-item">
+                  <img class="menu-logo" src="img/Star.svg" />
+                </a>
+                <a href="" class="menu-item">
+                  <img class="menu-logo" src="img/Settings.svg" />
+              </a>
+            </nav>
+          </aside>
+          <aside class="notes-list">
+              <div class="list-item">
+                <ul>
+              
+                </ul>
+              </div>
+          </aside>
+          <main class="main">
+              <div class="title">
+                  <input type="text" class="title-input" placeholder="Tilte">
+              </div>
+              <div class="date">
+                  <input type="date" name="" id="date-input">
+              </div>
+              <div class="text-area">
+                  <textarea name="text" id="text" cols="90" rows="60"></textarea>
+                  <button onclick="saveNote()" class="add-note btn"><i class="fa-solid fa-plus"></i></button>
+                  <button class="edit-note btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              </div>
+          </main>
+    <script src="script.js"></script>
   </body>
 </hml>

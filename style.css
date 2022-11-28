@@ -8,6 +8,8 @@
 .app {
   display: flex;
   min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .menu-toggle {
@@ -63,3 +65,65 @@
   margin-right: auto;
   display: block;
 }
+
+.notes-list{
+    width: 250px;
+    background-color: #3c3f58;
+
+}
+.list-item{
+  background-color: #3c3f58;
+  
+  
+}
+.list-item ul{
+  list-style: none;
+  background-color: rgb(129, 214, 186);
+}
+.list-item ul li{
+  margin-bottom: 10px;
+  border: 1px solid red;
+  height: 80px;
+  overflow: hidden;
+  word-wrap: break-word;
+  position: relative;
+}
+.main{
+  width: 700px;
+  margin-left: 250px;
+}
+#text{
+  /* border: none; */
+}
+.text-area{
+  position: relative;
+  width: 300px;
+}
+.add-note{
+  position: absolute;
+  bottom: 50px;
+  right: -360px;
+  
+}
+.edit-note{
+  position: absolute;
+  bottom: 115px;
+  right: -360px;
+}
+.btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color:rgb(60, 154, 186);
+}
+#text{
+  padding: 50px;
+}
+.list-item ul li :nth-child(3){
+  color : red;
+  position: absolute;
+  bottom:0px;
+  right: 0px;
+}
+
