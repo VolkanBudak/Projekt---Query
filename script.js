@@ -54,14 +54,14 @@ function deleteNotes(index){
     localStorage.setItem('notes',JSON.stringify(notes));
     renderNote()
 }
-/* function favoriteNotes(index){
+function favoriteNotes(index){
     document.querySelector('.fav-btn').classList.toggle('btn-color')
-} */
+}
 
 const open = document.querySelector('.section-logo');
 const modal = document.querySelector('.modal-container');
 const close = document.querySelector('.close');
-console.log(open);
+
 
 function toggle(){
     modal.classList.toggle('hide');
