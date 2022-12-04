@@ -8,6 +8,7 @@
 .app {
   display: flex;
   min-height: 100vh;
+  position: relative;
 }
 
 .menu-toggle {
@@ -62,4 +63,110 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.notes-list {
+  width: 250px;
+  background-color: #3c3f58;
+}
+.list-item {
+  background-color: #3c3f58;
+}
+.list-item ul {
+  list-style: none;
+  background-color: rgb(129, 214, 186);
+}
+.list-item ul li {
+  margin-bottom: 10px;
+  border: 1px solid red;
+  height: 80px;
+  overflow: hidden;
+  word-wrap: break-word;
+  position: relative;
+}
+.main {
+  width: 700px;
+  margin-left: 250px;
+}
+#text {
+  /* border: none; */
+}
+.text-area {
+  position: relative;
+  width: 300px;
+}
+.add-note {
+  position: absolute;
+  bottom: 50px;
+  right: -360px;
+}
+.edit-note {
+  position: absolute;
+  bottom: 115px;
+  right: -360px;
+}
+.btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(60, 154, 186);
+}
+#text {
+  padding: 50px;
+}
+.list-item ul li :nth-child(3) {
+  color: red;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.btn-color {
+  background-color: red;
+}
+
+/* --------------Asho------------ */
+
+body {
+  font-family: "popins", "sans-serif";
+}
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+}
+.modal p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 15px 0;
+}
+button {
+  background-color: cornflowerblue;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.section-logo {
+  cursor: pointer;
 }
