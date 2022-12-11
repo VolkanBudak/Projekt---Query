@@ -23,44 +23,53 @@
             </div>
           </div>
           <aside class="sidebar">
+            <!-- <div class="modal-container hide">
+              <div class="modal">
+                <h1>About</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facere necessitatibus animi magni tempora rerum laboriosam inventore porro aspernatur saepe provident placeat dolorum accusamus laborum voluptas cumque vel, totam quas!</p>
+                <button class="close">Close me</button>
+              </div>
+            </div> -->
             <section class="section-logo">
                 <img class="logo" src="img/Query.svg" alt="" />
             </section>
             <br />
             <br />
             <nav class="menu">
-                <a href="" class="menu-item is-active">
+                <div class="menu-item is-active">
                   <img class="menu-logo" src="img/Search.svg" />
-                </a>
-                <a href="" class="menu-item">
-                  <img class="menu-logo" src="img/Star.svg" />
-                </a>
-                <a href="" class="menu-item">
+                </div>
+                <div class="menu-item is">
+                  <img class="menu-logo star" src="img/Star.svg" />
+                </div>
+                <div class="menu-item">
                   <img class="menu-logo" src="img/Settings.svg" />
-                </a>
+                </div>
             </nav>
           </aside>
-          <aside class="notes-list">
-              <div class="list-item">
-                <ul>
-              
-                </ul>
-              </div>
-          </aside>
           <main class="main">
-              <div class="title">
-                  <input type="text" class="title-input" placeholder="Tilte">
-              </div>
-              <div class="date">
-                  <input type="date" name="" id="date-input">
-              </div>
-              <div class="text-area">
-                  <textarea name="text" id="text" cols="90" rows="60"></textarea>
-                  <button onclick="saveNote()" class="add-note btn"><i class="fa-solid fa-plus"></i></button>
-                  <button class="edit-note btn"><i class="fa-regular fa-pen-to-square"></i></button>
-              </div>
+              <aside class="notes-list">
+                <div class="list-item ">
+                  <ul>
+              
+                  </ul>
+                </div>
+              </aside>
+              <aside class="text-area1">
+                <div class="text-area">
+                    <div class="title">
+                      <input type="text" class="title-input" placeholder="Title">
+                    </div>
+                    <div class="date">
+                        <span>Last edited  </span><span class = "date2"></span>
+                    </div>
+                    <textarea name="text" id="text"></textarea>
+                    <button onclick="saveNote()" class="add-note btn"><i class="fa-solid fa-plus"></i></button>
+                    <button onclick="saveChange()" class="update-note btn"><i class="fa-solid fa-file-pen"></i></button>
+                    <!-- <button class="edit-note btn"><i class="fa-regular fa-pen-to-square"></i></button> -->
+                </div>
+            </aside>
           </main>
-          asdasdksajdlkasjdlkasdjlkadsjasd,hasdljsalkd
     <script src="script.js"></script>
   </body>
 </hml>

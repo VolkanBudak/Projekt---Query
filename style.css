@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Merriweather:wght@300&family=Nunito:wght@300&family=Roboto:wght@300;500&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +8,9 @@
 
 .app {
   display: flex;
-  min-height: 100vh;
-  position: relative;
+  height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .menu-toggle {
@@ -29,7 +31,7 @@
   flex: 1 1 0;
   max-width: 125px;
   padding: 2rem 1rem;
-  background-color: rgb(60, 154, 186);
+  background-color: rgb(120 192 217);
 }
 
 .sidebar .menu {
@@ -63,70 +65,95 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  cursor: pointer;
 }
 
 .notes-list{
     width: 250px;
-    background-color: #3c3f58;
-
-}
-.list-item{
-  background-color: #3c3f58;
-  
-  
+    height: 100vh;
+    overflow: auto;
+    background-color: #f1f5f8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
 }
 .list-item ul{
   list-style: none;
-  background-color: rgb(129, 214, 186);
+  display:flex ;
+  flex-direction: column;
+  gap: 10px;
 }
 .list-item ul li{
-  margin-bottom: 10px;
-  border: 1px solid red;
-  height: 80px;
+  height: 120px;
   overflow: hidden;
   word-wrap: break-word;
   position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.list-item ul li:hover{
+  background-color: #fff;
+}
+.list-item ul li h2{
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
 }
 .main{
-  width: 700px;
-  margin-left: 250px;
+  display: flex;
+  gap: 300px;
+  min-height: 100vh;
 }
-#text{
-  /* border: none; */
+input{
+  border: none;
+  height: 50px;
+}
+.title-input{
+  font-family: 'Merriweather', serif;
+  font-size: 30px;
+}
+#text {
+  border: none;
+  width: 750px;
+  height: 850px;
+  overflow: hidden;
 }
 .text-area{
   position: relative;
-  width: 300px;
+  margin-top:50px;
 }
-.add-note{
-  position: absolute;
-  bottom: 50px;
-  right: -360px;
-  
+#text {
+  outline: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 50px;
 }
-.edit-note{
+input, .date{
+  outline: none;
+  padding-left: 50px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.add-note, .update-note{
   position: absolute;
-  bottom: 115px;
-  right: -360px;
+  top:80%;
+  left:90%;
+}
+.date{
+  margin:20px 0;
 }
 .btn{
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
   background-color:rgb(60, 154, 186);
 }
-#text{
-  padding: 50px;
-}
 .list-item ul li :nth-child(3){
   color : red;
   position: absolute;
-  bottom:0px;
-  right: 0px;
+  bottom:5px;
+  right: 5px;
+  font-style: italic;
 }
 .btn-color{
-  background-color: red;
+  background-color: rgb(210, 223, 36);
 }
 
 /* --------------Asho------------ */
@@ -138,7 +165,7 @@ body{
   background-color: rgba(0,0,0,0.3);
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 1400px;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -161,16 +188,73 @@ body{
   opacity: 0.7;
   margin: 15px 0;
 }
+
 button{
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   border:0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  color: #fff;
   font-size: 14px;
-  padding: 10px 25px;
   cursor: pointer;
 }
 .section-logo{
   cursor: pointer;
 }
+
+
+
+/* ---- */
+.fav-btn{
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.delete-btn{
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
+.notes-list.notes-list-open{
+  transform: translateX(0);
+  opacity: 1;
+}
+@media (max-width:1400px){
+  .main {
+    display: flex;
+    gap: 100px;
+    height: 100vh;
+}
+}
+@media (max-width:1200px){
+  .main {
+    display: flex;
+    gap: 0;
+    height: 100vh;
+}
+  .text-area {
+    position: relative;
+    margin-top: 0px;
+  }
+}
+@media (max-width:1000px){
+  .notes-list{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color:#f1f5f8;
+    z-index: 1;
+    transition: all .3s ease-in;;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  .add-note, .update-note {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+}
+
+
