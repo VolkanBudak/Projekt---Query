@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
+body{
+  font-family: 'popins','sans-serif';
+}
 .app {
   display: flex;
   height: 100vh;
@@ -36,7 +38,6 @@
 
 .sidebar .menu {
   margin: 0 -1rem;
-  /* background-color: lightblue; */
 }
 
 .sidebar .menu .menu-item {
@@ -54,12 +55,10 @@
 
 .logo {
   width: 75px;
-
   display: block;
   margin-right: auto;
   margin-left: auto;
 }
-
 .menu-logo {
   width: 50px;
   margin-left: auto;
@@ -155,12 +154,6 @@ input, .date{
 .btn-color{
   background-color: rgb(210, 223, 36);
 }
-
-/* --------------Asho------------ */
-
-body{
-  font-family: 'popins','sans-serif';
-}
 .modal-container{
   background-color: rgba(0,0,0,0.3);
   position: absolute;
@@ -201,9 +194,6 @@ button{
   cursor: pointer;
 }
 
-
-
-/* ---- */
 .fav-btn{
   position: absolute;
   top: 20px;
@@ -240,7 +230,7 @@ button{
 @media (max-width:1000px){
   .notes-list{
     position: fixed;
-    top:0;
+    top:120px;
     left: 0;
     width: 250px;
     height: 100%;
@@ -254,6 +244,10 @@ button{
     position: absolute;
     top: 100%;
     left: 0;
+} 
+  .modal{
+    max-width: 100%;
+    margin-right: 500px;
 }
 }
 
