@@ -4,99 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/abdbd0fbf7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/abdbd0fbf7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Query</title>
   </head>
   <body onload="renderNote()">
-      <div class="app">
-          <div class="menu-toggle">
-            <div class="hamburger">
-                <span></span>
-            </div>
+    <div class="app">
+      <div class="modal-container hide">
+        <div class="modal">
+          <h1>About</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            facere necessitatibus animi magni tempora rerum laboriosam inventore
+            porro aspernatur saepe provident placeat dolorum accusamus laborum
+            voluptas cumque vel, totam quas!
+          </p>
+          <button class="close">Close me</button>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <section class="section-logo">
+          <img class="logo" src="img/Query.svg" alt="" />
+        </section>
+        <br />
+        <br />
+        <nav class="menu">
+          <div class="menu-item is-active">
+            <img class="menu-logo" src="img/Search.svg" />
           </div>
-          <div class="modal-container hide">
-            <div class="modal">
-              <h1>About</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam facere necessitatibus animi magni tempora rerum laboriosam inventore porro aspernatur saepe provident placeat dolorum accusamus laborum voluptas cumque vel, totam quas!</p>
-              <button class="close">Close me</button>
-            </div>
+          <div class="menu-item is">
+            <img class="menu-logo star" src="img/Star.svg" />
           </div>
-          <aside class="sidebar">
-            <section class="section-logo">
-                <img class="logo" src="img/Query.svg" alt="" />
-            </section>
-            <br />
-            <br />
-            <nav class="menu">
-                <a href="" class="menu-item is-active">
-                  <img class="menu-logo" src="img/Search.svg" />
-                </a>
-                <a href="" class="menu-item">
-                  <img class="menu-logo" src="img/Star.svg" />
-                </a>
-                <a href="" class="menu-item">
-                  <img class="menu-logo" src="img/Settings.svg" />
-              </a>
-            </nav>
-          </aside>
-          <aside class="notes-list">
-              <div class="list-item">
-                <ul>
-              
-                </ul>
-              </div>
-          </aside>
-          <section>
-            <div class="row">
-                <div class="col">
-                    <div class="first box">
-                        <input id="font-size" type="number" value="16" min="1" max="100" onchange="f1(this)">
-                    </div>
-                    <div class="second box">
-                        <button type="button" onclick="f2(this)">
-                            <i class="fa-solid fa-bold"></i>
-                        </button>
-                        <button type="button" onclick="f3(this)">
-                            <i class="fa-solid fa-italic"></i>
-                        </button>
-                        <button type="button" onclick="f4(this)">
-                            <i class="fa-solid fa-underline"></i>
-                        </button>
-                    </div>
-                    <div class="third box">
-                        <button type="button" onclick="f5(this)">
-                            <i class="fa-solid fa-align-left"></i>
-                        </button>
-                        <button type="button" onclick="f6(this)">
-                            <i class="fa-solid fa-align-center"></i>
-                        </button>
-                        <button type="button" onclick="f7(this)">
-                            <i class="fa-solid fa-align-right"></i>
-                        </button>
-                    </div>
-                    <div class="fourth box">
-                        <button type="button" onclick="f8(this)">aA</button>
-                        <button type="button" onclick="f9()">
-                            <i class="fa-solid fa-text-slash"></i>
-                        </button>
-                        <input type="color" onchange="f10(this)">
-                    </div>
-                </div>
+          <div class="menu-item">
+            <img class="menu-logo" src="img/Settings.svg" />
+          </div>
+        </nav>
+      </aside>
+      <main class="main">
+        <aside class="notes-list">
+          <div class="list-item">
+            <ul></ul>
+          </div>
+        </aside>
+        <aside class="main-area">
+          <div class="text-area">
+            <div class="title">
+              <input type="text" class="title-input" placeholder="Title" />
             </div>
-          <main class="main">
-              <div class="title">
-                  <input type="text" class="title-input" placeholder="Tilte">
-              </div>
-              <div class="date">
-                  <input type="date" name="" id="date-input">
-              </div>
-              <div class="text-area">
-                  <textarea name="text" id="text" cols="90" rows="60"></textarea>
-                  <button onclick="saveNote()" class="add-note btn"><i class="fa-solid fa-plus"></i></button>
-                  <button class="edit-note btn"><i class="fa-regular fa-pen-to-square"></i></button>
-              </div>
-          </main>
+            <div class="date">
+              <span>Last edited </span><span class="date2"></span>
+            </div>
+            <textarea name="text" id="text"></textarea>
+            <button onclick="saveNote()" class="add-note btn">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button onclick="saveChange()" class="update-note btn">
+              <i class="fa-solid fa-file-pen"></i>
+            </button>
+          </div>
+        </aside>
+      </main>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
